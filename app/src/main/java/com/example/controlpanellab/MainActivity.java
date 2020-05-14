@@ -8,21 +8,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
     ConstraintLayout mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainLayout = findViewById(R.id.main_view);
         setContentView(R.layout.activity_main);
+        /* SEMPRE FAZER A ATRIBUIÇÃO DE VALORES DEPOIS DO SETCONTENTVIEW */
+        mainLayout = findViewById(R.id.main_view);
     }
 
     @Override
@@ -74,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_refresh:
                 /*Toast.makeText(this,item.getTitle(), Toast.LENGTH_LONG)
                         .show();*/
-                //Snackbar.make(mainLayout, item.getTitle(), Snackbar.LENGTH_SHORT).show();
-                Snackbar.make(getWindow().getDecorView(), item.getTitle(), Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(mainLayout, item.getTitle(), Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make(getWindow().getDecorView(), item.getTitle(), Snackbar.LENGTH_SHORT).show();
                 break;
         }
 
