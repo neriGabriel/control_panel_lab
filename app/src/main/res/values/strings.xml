@@ -2,4 +2,5 @@
     <string name="app_name">Control Panel Lab</string>
     <string name="menu_help_title">Help</string>
     <string name="men_refresh_title">Refresh</string>
+    <string name="onclick">OnClick</string>
 </resources>
